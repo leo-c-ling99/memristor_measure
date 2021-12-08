@@ -1,0 +1,72 @@
+Added Component: Designator=JDGen(VB335)
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://belfuse.com/resources/drawings/cinchconnectivitysolutions/vitelec/dr-ccs-vit-vb335.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "18.9mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Cinch Connectivity Solutions"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "VB335"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser2 Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser2 Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=JLNA(VB335)
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://belfuse.com/resources/drawings/cinchconnectivitysolutions/vitelec/dr-ccs-vit-vb335.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "18.9mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Cinch Connectivity Solutions"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "VB335"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser2 Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser2 Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=JProbe(VB335)
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://belfuse.com/resources/drawings/cinchconnectivitysolutions/vitelec/dr-ccs-vit-vb335.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "18.9mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Cinch Connectivity Solutions"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "VB335"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser2 Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser2 Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=KDGen(99130520)
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://cotorelay.com/wp-content/uploads/2015/02/9913Datasheet-15Jan2015.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "3.61mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Coto Technology"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "9913-05-20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser2 Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser2 Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=KLNA(99130520)
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://cotorelay.com/wp-content/uploads/2015/02/9913Datasheet-15Jan2015.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "3.61mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Coto Technology"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "9913-05-20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser2 Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser2 Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=PMCU(HDR1X3)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=JDGen-2
+Added Pin To Net: NetName=GND Pin=JDGen-3
+Added Pin To Net: NetName=GND Pin=JDGen-4
+Added Pin To Net: NetName=GND Pin=JDGen-5
+Added Pin To Net: NetName=GND Pin=JLNA-2
+Added Pin To Net: NetName=GND Pin=JLNA-3
+Added Pin To Net: NetName=GND Pin=JLNA-4
+Added Pin To Net: NetName=GND Pin=JLNA-5
+Added Pin To Net: NetName=GND Pin=JProbe-2
+Added Pin To Net: NetName=GND Pin=JProbe-3
+Added Pin To Net: NetName=GND Pin=JProbe-4
+Added Pin To Net: NetName=GND Pin=JProbe-5
+Added Net: Name=GND
+Added Pin To Net: NetName=NetDGen Pin=JDGen-1
+Added Pin To Net: NetName=NetDGen Pin=KDGen-3
+Added Net: Name=NetDGen
+Added Pin To Net: NetName=NetLNA Pin=JLNA-1
+Added Pin To Net: NetName=NetLNA Pin=KLNA-3
+Added Net: Name=NetLNA
+Added Pin To Net: NetName=NetMCU1 Pin=KLNA-1
+Added Pin To Net: NetName=NetMCU1 Pin=PMCU-1
+Added Net: Name=NetMCU1
+Added Pin To Net: NetName=NetMCU2 Pin=KDGen-1
+Added Pin To Net: NetName=NetMCU2 Pin=PMCU-3
+Added Net: Name=NetMCU2
+Added Pin To Net: NetName=NetMCU_GND Pin=KDGen-2
+Added Pin To Net: NetName=NetMCU_GND Pin=KLNA-2
+Added Pin To Net: NetName=NetMCU_GND Pin=PMCU-2
+Added Net: Name=NetMCU_GND
+Added Pin To Net: NetName=NetProbe Pin=JProbe-1
+Added Pin To Net: NetName=NetProbe Pin=KDGen-4
+Added Pin To Net: NetName=NetProbe Pin=KLNA-4
+Added Net: Name=NetProbe
