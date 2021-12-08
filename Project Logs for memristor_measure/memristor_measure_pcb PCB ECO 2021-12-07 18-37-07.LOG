@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=NetMCU2 Pin=KDGen-1
+Removed Pin From Net: NetName=NetMCU_GND Pin=KDGen-2
+Removed Pin From Net: NetName=NetDGen Pin=KDGen-3
+Removed Pin From Net: NetName=NetProbe Pin=KDGen-4
+Added Pin To Net: NetName=NetMCU_GND Pin=KDGen-1
+Added Pin To Net: NetName=NetMCU2 Pin=KDGen-2
+Added Pin To Net: NetName=NetProbe Pin=KDGen-3
+Added Pin To Net: NetName=NetDGen Pin=KDGen-4
