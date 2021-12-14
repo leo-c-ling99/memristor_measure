@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=DGenGND Pin=KDGen_GND-3
+Removed Pin From Net: NetName=NetProbe Pin=KDGen_GND-4
+Removed Pin From Net: NetName=NetProbe Pin=KLNA_GND-3
+Removed Pin From Net: NetName=LNAGND Pin=KLNA_GND-4
+Added Pin To Net: NetName=NetProbe Pin=KDGen_GND-3
+Added Pin To Net: NetName=DGenGND Pin=KDGen_GND-4
+Added Pin To Net: NetName=LNAGND Pin=KLNA_GND-3
+Added Pin To Net: NetName=NetProbe Pin=KLNA_GND-4

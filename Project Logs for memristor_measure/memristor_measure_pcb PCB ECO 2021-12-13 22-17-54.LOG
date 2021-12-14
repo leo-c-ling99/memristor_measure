@@ -1,0 +1,8 @@
+Change Physical Footprint: Designator=JDGen Old Footprint=VB335 New Footprint=VB335
+Change Physical Footprint: Designator=JLNA Old Footprint=VB335 New Footprint=VB335
+Change Physical Footprint: Designator=JProbe Old Footprint=VB335 New Footprint=VB335
+Change Physical Footprint: Designator=KDGen Old Footprint=99130520 New Footprint=99130520
+Change Physical Footprint: Designator=KDGen_GND Old Footprint=99130520 New Footprint=99130520
+Change Physical Footprint: Designator=KLNA Old Footprint=99130520 New Footprint=99130520
+Change Physical Footprint: Designator=KLNA_GND Old Footprint=99130520 New Footprint=99130520
+Change Physical Footprint: Designator=PMCU Old Footprint=HDR1X4 New Footprint=HDR1X4

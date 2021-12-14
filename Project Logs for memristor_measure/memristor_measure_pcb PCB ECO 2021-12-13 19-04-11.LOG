@@ -1,0 +1,24 @@
+Removed Pin From Net: NetName=GND Pin=JDGen-2
+Removed Pin From Net: NetName=GND Pin=JDGen-3
+Removed Pin From Net: NetName=GND Pin=JDGen-4
+Removed Pin From Net: NetName=GND Pin=JDGen-5
+Removed Pin From Net: NetName=GND Pin=JProbe-2
+Removed Pin From Net: NetName=GND Pin=JProbe-3
+Removed Pin From Net: NetName=GND Pin=JProbe-4
+Removed Pin From Net: NetName=GND Pin=JProbe-5
+Removed Pin From Net: NetName=NetMCU2 Pin=PMCU-3
+Change Component Footprint: Designator=PMCU Old Footprint=HDR1X3 New Footprint=HDR1X4
+Change Component Comment : Designator=PMCU Old Comment=Header 3 New Comment=Header 4
+Added Pin To Net: NetName=NetMCU2 Pin=PMCU-4
+Change Net Name : Old Net Name=GND New Net Name=LNAGND
+Added Pin To Net: NetName=DGenGND Pin=JDGen-2
+Added Pin To Net: NetName=DGenGND Pin=JDGen-3
+Added Pin To Net: NetName=DGenGND Pin=JDGen-4
+Added Pin To Net: NetName=DGenGND Pin=JDGen-5
+Added Net: Name=DGenGND
+Added Pin To Net: NetName=ProbeGND Pin=JProbe-2
+Added Pin To Net: NetName=ProbeGND Pin=JProbe-3
+Added Pin To Net: NetName=ProbeGND Pin=JProbe-4
+Added Pin To Net: NetName=ProbeGND Pin=JProbe-5
+Added Pin To Net: NetName=ProbeGND Pin=PMCU-3
+Added Net: Name=ProbeGND

@@ -1,0 +1,117 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc
+Date     : 2021-12-13
+Time     : 22:59:29
+
+Processing Rule : Clearance Constraint (Gap=10mil) (All),(All)
+   Violation between Clearance Constraint: (Collision < 10mil) Pad KDGen_GND-1(1009.842mil,262.825mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Pad KDGen_GND-2(683.071mil,262.825mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Pad KDGen_GND-3(1009.842mil,362.825mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Pad KDGen_GND-4(683.071mil,362.825mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Pad KDGen-1(683.071mil,605.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Pad KDGen-2(1009.842mil,605.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Pad KDGen-3(683.071mil,505.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Pad KDGen-4(1009.842mil,505.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Pad KLNA_GND-1(2072.835mil,262.825mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Pad KLNA_GND-2(1746.063mil,262.825mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Pad KLNA_GND-3(2072.835mil,362.825mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Pad KLNA_GND-4(1746.063mil,362.825mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Pad KLNA-1(1746.063mil,605.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Pad KLNA-2(2072.835mil,605.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Pad KLNA-3(1746.063mil,505.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Pad KLNA-4(2072.835mil,505.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (314.961mil,437.402mil)(557.402mil,437.402mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (557.402mil,437.402mil)(625.512mil,505.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (625.512mil,505.512mil)(683.071mil,505.512mil) on Top Layer 
+Rule Violations :19
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Net DGenGND Between Pad JDGen-2(191.929mil,314.37mil) on Multi-Layer And Pad JDGen-3(437.992mil,314.37mil) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net DGenGND Between Pad JDGen-2(191.929mil,314.37mil) on Multi-Layer And Pad JDGen-5(191.929mil,560.433mil) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net DGenGND Between Pad JDGen-3(437.992mil,314.37mil) on Multi-Layer And Pad KDGen_GND-4(683.071mil,362.825mil) on Top Layer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net DGenGND Between Pad JDGen-5(191.929mil,560.433mil) on Multi-Layer And Pad JDGen-4(437.992mil,560.433mil) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net NetLNA Between Pad KLNA-4(2072.835mil,505.512mil) on Top Layer [Unplated] And Pad JLNA-1(2440.945mil,437.402mil) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net LNAGND Between Pad JLNA-2(2317.913mil,314.37mil) on Multi-Layer And Pad JLNA-3(2563.976mil,314.37mil) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net LNAGND Between Pad KLNA_GND-3(2072.835mil,362.825mil) on Top Layer [Unplated] And Pad JLNA-2(2317.913mil,314.37mil) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net LNAGND Between Pad JLNA-3(2563.976mil,314.37mil) on Multi-Layer And Pad JLNA-4(2563.976mil,560.433mil) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net LNAGND Between Pad JLNA-5(2317.913mil,560.433mil) on Multi-Layer And Pad JLNA-4(2563.976mil,560.433mil) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net NetProbe Between Pad KDGen-4(1009.842mil,505.512mil) on Top Layer [Unplated] And Pad JProbe-1(1377.953mil,437.402mil) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net NetProbe Between Pad JProbe-1(1377.953mil,437.402mil) on Multi-Layer And Pad KLNA-3(1746.063mil,505.512mil) on Top Layer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net ProbeGND Between Pad JProbe-2(1254.921mil,314.37mil) on Multi-Layer And Pad JProbe-3(1500.984mil,314.37mil) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net ProbeGND Between Pad JProbe-2(1254.921mil,314.37mil) on Multi-Layer And Pad JProbe-5(1254.921mil,560.433mil) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net ProbeGND Between Pad KDGen_GND-3(1009.842mil,362.825mil) on Top Layer [Unplated] And Pad JProbe-2(1254.921mil,314.37mil) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net ProbeGND Between Pad JProbe-3(1500.984mil,314.37mil) on Multi-Layer And Pad JProbe-4(1500.984mil,560.433mil) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net ProbeGND Between Pad JProbe-3(1500.984mil,314.37mil) on Multi-Layer And Pad KLNA_GND-4(1746.063mil,362.825mil) on Top Layer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net ProbeGND Between Pad JProbe-5(1254.921mil,560.433mil) on Multi-Layer And Pad PMCU-3(1320mil,770mil) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net NetMCU_GND Between Pad KDGen_GND-1(1009.842mil,262.825mil) on Top Layer [Unplated] And Pad KDGen-2(1009.842mil,605.512mil) on Top Layer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net NetMCU2 Between Pad KDGen_GND-2(683.071mil,262.825mil) on Top Layer [Unplated] And Pad KDGen-1(683.071mil,605.512mil) on Top Layer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net NetMCU2 Between Pad KDGen-1(683.071mil,605.512mil) on Top Layer [Unplated] And Pad PMCU-4(1220mil,770mil) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net NetMCU_GND Between Pad KDGen-2(1009.842mil,605.512mil) on Top Layer [Unplated] And Pad PMCU-2(1420mil,770mil) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net NetMCU1 Between Pad KLNA_GND-1(2072.835mil,262.825mil) on Top Layer [Unplated] And Pad KLNA-2(2072.835mil,605.512mil) on Top Layer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net NetMCU_GND Between Pad KLNA_GND-2(1746.063mil,262.825mil) on Top Layer [Unplated] And Pad KLNA-1(1746.063mil,605.512mil) on Top Layer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net NetMCU_GND Between Pad PMCU-2(1420mil,770mil) on Multi-Layer And Pad KLNA-1(1746.063mil,605.512mil) on Top Layer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net NetMCU1 Between Pad PMCU-1(1520mil,770mil) on Multi-Layer And Pad KLNA-2(2072.835mil,605.512mil) on Top Layer [Unplated] 
+Rule Violations :25
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=21.047mil) (Max=21.047mil) (Preferred=21.047mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+Rule Violations :0
+
+Processing Rule : Pads and Vias to follow the Drill pairs settings
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=10mil) (IsPad),(All)
+   Violation between Silk To Solder Mask Clearance Constraint: (9.055mil < 10mil) Between Pad KDGen_GND-1(1009.842mil,262.825mil) on Top Layer And Track (688.976mil,237.825mil)(1003.937mil,237.825mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.055mil < 10mil) Between Pad KDGen_GND-2(683.071mil,262.825mil) on Top Layer And Track (688.976mil,237.825mil)(1003.937mil,237.825mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.055mil < 10mil) Between Pad KDGen_GND-3(1009.842mil,362.825mil) on Top Layer And Track (728.346mil,387.825mil)(984.252mil,387.825mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.055mil < 10mil) Between Pad KDGen-1(683.071mil,605.512mil) on Top Layer And Track (688.976mil,630.512mil)(1003.937mil,630.512mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.055mil < 10mil) Between Pad KDGen-2(1009.842mil,605.512mil) on Top Layer And Track (688.976mil,630.512mil)(1003.937mil,630.512mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.055mil < 10mil) Between Pad KDGen-3(683.071mil,505.512mil) on Top Layer And Track (708.661mil,480.512mil)(964.567mil,480.512mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.055mil < 10mil) Between Pad KLNA_GND-1(2072.835mil,262.825mil) on Top Layer And Track (1751.968mil,237.825mil)(2066.929mil,237.825mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.055mil < 10mil) Between Pad KLNA_GND-2(1746.063mil,262.825mil) on Top Layer And Track (1751.968mil,237.825mil)(2066.929mil,237.825mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.055mil < 10mil) Between Pad KLNA_GND-3(2072.835mil,362.825mil) on Top Layer And Track (1791.339mil,387.825mil)(2047.244mil,387.825mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.055mil < 10mil) Between Pad KLNA-1(1746.063mil,605.512mil) on Top Layer And Track (1751.968mil,630.512mil)(2066.929mil,630.512mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.055mil < 10mil) Between Pad KLNA-2(2072.835mil,605.512mil) on Top Layer And Track (1751.968mil,630.512mil)(2066.929mil,630.512mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.055mil < 10mil) Between Pad KLNA-3(1746.063mil,505.512mil) on Top Layer And Track (1771.653mil,480.512mil)(2027.559mil,480.512mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]
+Rule Violations :12
+
+Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
+   Violation between Silk To Silk Clearance Constraint: (9.498mil < 10mil) Between Text "PMCU" (1270.666mil,838.435mil) on Top Overlay And Track (1170mil,820mil)(1570mil,820mil) on Top Overlay Silk Text to Silk Clearance [9.498mil]
+Rule Violations :1
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Return Path Constraints (Gap =0mil) (All)
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 10mil, Vertical Gap = 10mil ) (All),(All) 
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 57
+Waived Violations : 0
+Time Elapsed        : 00:00:08

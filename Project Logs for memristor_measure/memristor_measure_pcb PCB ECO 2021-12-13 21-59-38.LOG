@@ -1,0 +1,22 @@
+Added Component: Designator=KDGen_GND(99130520)
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://cotorelay.com/wp-content/uploads/2015/02/9913Datasheet-15Jan2015.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "3.61mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Coto Technology"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "9913-05-20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser2 Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser2 Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=KLNA_GND(99130520)
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://cotorelay.com/wp-content/uploads/2015/02/9913Datasheet-15Jan2015.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "3.61mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Coto Technology"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "9913-05-20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser2 Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser2 Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetMCU2 Pin=KDGen_GND-1
+Added Pin To Net: NetName=NetMCU_GND Pin=KDGen_GND-2
+Added Pin To Net: NetName=DGenGND Pin=KDGen_GND-3
+Added Pin To Net: NetName=NetProbe Pin=KDGen_GND-4
+Added Pin To Net: NetName=NetMCU_GND Pin=KLNA_GND-1
+Added Pin To Net: NetName=NetMCU1 Pin=KLNA_GND-2
+Added Pin To Net: NetName=NetProbe Pin=KLNA_GND-3
+Added Pin To Net: NetName=LNAGND Pin=KLNA_GND-4

@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=ProbeGND Pin=KDGen-4
+Added Pin To Net: NetName=NetProbe Pin=KDGen-4

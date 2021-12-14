@@ -1,0 +1,527 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD21\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2021-12-13</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">22:59:29</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:08</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc" class="file"><acronym title="C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc">C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">57</td></tr>
+</table>
+</td>
+</table><a name="ID1V4AFPNAJ2L0NXLTH1K1JHNJ2MESAMG03P3YLIYXOOXCAQCTM4K"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDD52DJMZ51M5THWRVW4Q1C044VE20STJHCDRE1O4RHZJWDHMD10C">Clearance Constraint (Gap=10mil) (All),(All)</a></td>
+<td class="column2">19</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWSEA4MIGYEAICS2DSXIX15JBBVI1UG0IM0S1XMF0JT2DJPU3JCE">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQDQL3215404GIOWZ1LGY0ZLIAB50FQDKSL14UTMROYKV0OJXWCNO">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">25</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYNAYEUQ00W2GNFQ5CQ41GK1TJJNKPBXVEMPMGXNQQZZQM0DCB5XH">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDS325FHVYZ5MHEIQIM3PEH4AHYIF3WQJVQKML4HEEM5OPYFC0V3PM">Width Constraint (Min=21.047mil) (Max=21.047mil) (Preferred=21.047mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDX3JUD1MSYB5ILJKECVSIWRJGOVLSFEZ0WBWAEHUFFDMNQ5X2U5">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGJSRMGM3LFIJMSMILLCQLF0RAN2O5J5PU0WEP5B5N2JRUIKZEDRC">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDI5EFG11FSTOBPTFQ0SSEUCWKLDSK3X0UWUTWMO2BMJ1P45MT0ZI">Pads and Vias to follow the Drill pairs settings</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDX5JUOB0ZESB1GPKYXY2CKFULKPJ4A2QTOCG4FRCETNPOX25T3F3J">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBL20PCK0PHWTFPJZBFUEKJFBMMNK0YIXVYAHAAPGS2VJQ1NM2RPI">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0UKZ1GLSA102JOIHB2PQW5OL3L3HX51JHUSH12BFWEG4ZLMM4YIL">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</a></td>
+<td class="column2">12</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDHQ0NRGSDEJJGL40IVQHYZEFMAPYITONU52WLKZO52IYWYHIWFWFN">Silk to Silk (Clearance=10mil) (All),(All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDV3D2SKCHY3A5L5H52TKVZMNL2KQ311KJKEWQT1CSXFIO3GRR5NRO">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJO1PKCROB1PEN1QYFY5J5C2E0MGXBCF4PUPBLVEQXO2YFPR1JALB">Board Clearance Constraint (Gap=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBGFEG4LUSDTKHVO2052CPDFMJFEY2IJEGITBG0BYB3NVH2BBIML">Return Path Constraints (Gap =0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBQ5344TAI5SGOK3MY1ZU5VR4IDYADVSPAT22LRGL2YPM3N4KZ5T">Component Clearance Constraint ( Horizontal Gap = 10mil, Vertical Gap = 10mil ) (All),(All) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0NZWSV2KTUWGFYYIJZDIUBK01D2W443C32XSTEJZ0ITDQD0DFH0N">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">57</td>
+</tr>
+</table><br><a name="IDD52DJMZ51M5THWRVW4Q1C044VE20STJHCDRE1O4RHZJWDHMD10C"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2593.529mil|Location2.X=2601.195mil|Location1.Y=1844.385mil|Location2.Y=1852.052mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2593.529mil|Location2.X=2601.195mil|Location1.Y=1844.385mil|Location2.Y=1852.052mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Pad KDGen_GND-1(1009.842mil,262.825mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2266.757mil|Location2.X=2274.424mil|Location1.Y=1844.385mil|Location2.Y=1852.052mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2266.757mil|Location2.X=2274.424mil|Location1.Y=1844.385mil|Location2.Y=1852.052mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Pad KDGen_GND-2(683.071mil,262.825mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2593.529mil|Location2.X=2601.195mil|Location1.Y=1944.385mil|Location2.Y=1952.052mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2593.529mil|Location2.X=2601.195mil|Location1.Y=1944.385mil|Location2.Y=1952.052mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Pad KDGen_GND-3(1009.842mil,362.825mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2266.757mil|Location2.X=2274.424mil|Location1.Y=1944.385mil|Location2.Y=1952.052mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2266.757mil|Location2.X=2274.424mil|Location1.Y=1944.385mil|Location2.Y=1952.052mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Pad KDGen_GND-4(683.071mil,362.825mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2345.497mil|Location2.X=2353.164mil|Location1.Y=2215.025mil|Location2.Y=2222.692mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2345.497mil|Location2.X=2353.164mil|Location1.Y=2215.025mil|Location2.Y=2222.692mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Pad KDGen-1(683.071mil,605.512mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2672.269mil|Location2.X=2679.936mil|Location1.Y=2215.025mil|Location2.Y=2222.692mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2672.269mil|Location2.X=2679.936mil|Location1.Y=2215.025mil|Location2.Y=2222.692mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Pad KDGen-2(1009.842mil,605.512mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2345.497mil|Location2.X=2353.164mil|Location1.Y=2115.025mil|Location2.Y=2122.692mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2345.497mil|Location2.X=2353.164mil|Location1.Y=2115.025mil|Location2.Y=2122.692mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Pad KDGen-3(683.071mil,505.512mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2672.269mil|Location2.X=2679.936mil|Location1.Y=2115.025mil|Location2.Y=2122.692mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2672.269mil|Location2.X=2679.936mil|Location1.Y=2115.025mil|Location2.Y=2122.692mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Pad KDGen-4(1009.842mil,505.512mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3656.521mil|Location2.X=3664.188mil|Location1.Y=1844.385mil|Location2.Y=1852.052mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3656.521mil|Location2.X=3664.188mil|Location1.Y=1844.385mil|Location2.Y=1852.052mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Pad KLNA_GND-1(2072.835mil,262.825mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3329.749mil|Location2.X=3337.416mil|Location1.Y=1844.385mil|Location2.Y=1852.052mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3329.749mil|Location2.X=3337.416mil|Location1.Y=1844.385mil|Location2.Y=1852.052mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Pad KLNA_GND-2(1746.063mil,262.825mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3656.521mil|Location2.X=3664.188mil|Location1.Y=1944.385mil|Location2.Y=1952.052mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3656.521mil|Location2.X=3664.188mil|Location1.Y=1944.385mil|Location2.Y=1952.052mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Pad KLNA_GND-3(2072.835mil,362.825mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3329.749mil|Location2.X=3337.416mil|Location1.Y=1944.385mil|Location2.Y=1952.052mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3329.749mil|Location2.X=3337.416mil|Location1.Y=1944.385mil|Location2.Y=1952.052mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Pad KLNA_GND-4(1746.063mil,362.825mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3408.49mil|Location2.X=3416.156mil|Location1.Y=2215.025mil|Location2.Y=2222.692mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3408.49mil|Location2.X=3416.156mil|Location1.Y=2215.025mil|Location2.Y=2222.692mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Pad KLNA-1(1746.063mil,605.512mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3735.261mil|Location2.X=3742.928mil|Location1.Y=2215.025mil|Location2.Y=2222.692mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3735.261mil|Location2.X=3742.928mil|Location1.Y=2215.025mil|Location2.Y=2222.692mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Pad KLNA-2(2072.835mil,605.512mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3408.49mil|Location2.X=3416.156mil|Location1.Y=2115.025mil|Location2.Y=2122.692mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3408.49mil|Location2.X=3416.156mil|Location1.Y=2115.025mil|Location2.Y=2122.692mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Pad KLNA-3(1746.063mil,505.512mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3735.261mil|Location2.X=3742.928mil|Location1.Y=2115.025mil|Location2.Y=2122.692mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3735.261mil|Location2.X=3742.928mil|Location1.Y=2115.025mil|Location2.Y=2122.692mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Pad KLNA-4(2072.835mil,505.512mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1938.017mil|Location2.X=1945.684mil|Location1.Y=2032.938mil|Location2.Y=2040.605mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1938.017mil|Location2.X=1945.684mil|Location1.Y=2032.938mil|Location2.Y=2040.605mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Track (314.961mil,437.402mil)(557.402mil,437.402mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2180.458mil|Location2.X=2188.125mil|Location1.Y=2032.938mil|Location2.Y=2040.605mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2180.458mil|Location2.X=2188.125mil|Location1.Y=2032.938mil|Location2.Y=2040.605mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Track (557.402mil,437.402mil)(625.512mil,505.512mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2248.568mil|Location2.X=2256.235mil|Location1.Y=2101.049mil|Location2.Y=2108.715mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2248.568mil|Location2.X=2256.235mil|Location1.Y=2101.049mil|Location2.Y=2108.715mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Track (625.512mil,505.512mil)(683.071mil,505.512mil) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDQDQL3215404GIOWZ1LGY0ZLIAB50FQDKSL14UTMROYKV0OJXWCNO"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1770.528mil|Location2.X=2113.173mil|Location1.Y=1865.449mil|Location2.Y=1962.032mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1770.528mil|Location2.X=2113.173mil|Location1.Y=1865.449mil|Location2.Y=1962.032mil|Absolute=True">Un-Routed Net Constraint: Net DGenGND Between Pad JDGen-2(191.929mil,314.37mil) on Multi-Layer And Pad JDGen-3(437.992mil,314.37mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1770.528mil|Location2.X=1867.11mil|Location1.Y=1865.449mil|Location2.Y=2208.095mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1770.528mil|Location2.X=1867.11mil|Location1.Y=1865.449mil|Location2.Y=2208.095mil|Absolute=True">Un-Routed Net Constraint: Net DGenGND Between Pad JDGen-2(191.929mil,314.37mil) on Multi-Layer And Pad JDGen-5(191.929mil,560.433mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2016.591mil|Location2.X=2353.331mil|Location1.Y=1865.449mil|Location2.Y=1980.171mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2016.591mil|Location2.X=2353.331mil|Location1.Y=1865.449mil|Location2.Y=1980.171mil|Absolute=True">Un-Routed Net Constraint: Net DGenGND Between Pad JDGen-3(437.992mil,314.37mil) on Multi-Layer And Pad KDGen_GND-4(683.071mil,362.825mil) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1770.528mil|Location2.X=2113.173mil|Location1.Y=2111.512mil|Location2.Y=2208.095mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1770.528mil|Location2.X=2113.173mil|Location1.Y=2111.512mil|Location2.Y=2208.095mil|Absolute=True">Un-Routed Net Constraint: Net DGenGND Between Pad JDGen-5(191.929mil,560.433mil) on Multi-Layer And Pad JDGen-4(437.992mil,560.433mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3656.354mil|Location2.X=4110.221mil|Location1.Y=1994.386mil|Location2.Y=2122.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3656.354mil|Location2.X=4110.221mil|Location1.Y=1994.386mil|Location2.Y=2122.858mil|Absolute=True">Un-Routed Net Constraint: Net NetLNA Between Pad KLNA-4(2072.835mil,505.512mil) on Top Layer [Unplated] And Pad JLNA-1(2440.945mil,437.402mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3896.512mil|Location2.X=4239.158mil|Location1.Y=1865.449mil|Location2.Y=1962.032mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3896.512mil|Location2.X=4239.158mil|Location1.Y=1865.449mil|Location2.Y=1962.032mil|Absolute=True">Un-Routed Net Constraint: Net LNAGND Between Pad JLNA-2(2317.913mil,314.37mil) on Multi-Layer And Pad JLNA-3(2563.976mil,314.37mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3656.354mil|Location2.X=3993.095mil|Location1.Y=1865.449mil|Location2.Y=1980.171mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3656.354mil|Location2.X=3993.095mil|Location1.Y=1865.449mil|Location2.Y=1980.171mil|Absolute=True">Un-Routed Net Constraint: Net LNAGND Between Pad KLNA_GND-3(2072.835mil,362.825mil) on Top Layer [Unplated] And Pad JLNA-2(2317.913mil,314.37mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4142.575mil|Location2.X=4239.158mil|Location1.Y=1865.449mil|Location2.Y=2208.095mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4142.575mil|Location2.X=4239.158mil|Location1.Y=1865.449mil|Location2.Y=2208.095mil|Absolute=True">Un-Routed Net Constraint: Net LNAGND Between Pad JLNA-3(2563.976mil,314.37mil) on Multi-Layer And Pad JLNA-4(2563.976mil,560.433mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3896.512mil|Location2.X=4239.158mil|Location1.Y=2111.512mil|Location2.Y=2208.095mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3896.512mil|Location2.X=4239.158mil|Location1.Y=2111.512mil|Location2.Y=2208.095mil|Absolute=True">Un-Routed Net Constraint: Net LNAGND Between Pad JLNA-5(2317.913mil,560.433mil) on Multi-Layer And Pad JLNA-4(2563.976mil,560.433mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2593.362mil|Location2.X=3047.228mil|Location1.Y=1994.386mil|Location2.Y=2122.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2593.362mil|Location2.X=3047.228mil|Location1.Y=1994.386mil|Location2.Y=2122.858mil|Absolute=True">Un-Routed Net Constraint: Net NetProbe Between Pad KDGen-4(1009.842mil,505.512mil) on Top Layer [Unplated] And Pad JProbe-1(1377.953mil,437.402mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2962.457mil|Location2.X=3416.323mil|Location1.Y=1994.386mil|Location2.Y=2122.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2962.457mil|Location2.X=3416.323mil|Location1.Y=1994.386mil|Location2.Y=2122.858mil|Absolute=True">Un-Routed Net Constraint: Net NetProbe Between Pad JProbe-1(1377.953mil,437.402mil) on Multi-Layer And Pad KLNA-3(1746.063mil,505.512mil) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2833.52mil|Location2.X=3176.165mil|Location1.Y=1865.449mil|Location2.Y=1962.032mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2833.52mil|Location2.X=3176.165mil|Location1.Y=1865.449mil|Location2.Y=1962.032mil|Absolute=True">Un-Routed Net Constraint: Net ProbeGND Between Pad JProbe-2(1254.921mil,314.37mil) on Multi-Layer And Pad JProbe-3(1500.984mil,314.37mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2833.52mil|Location2.X=2930.102mil|Location1.Y=1865.449mil|Location2.Y=2208.095mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2833.52mil|Location2.X=2930.102mil|Location1.Y=1865.449mil|Location2.Y=2208.095mil|Absolute=True">Un-Routed Net Constraint: Net ProbeGND Between Pad JProbe-2(1254.921mil,314.37mil) on Multi-Layer And Pad JProbe-5(1254.921mil,560.433mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2593.362mil|Location2.X=2930.102mil|Location1.Y=1865.449mil|Location2.Y=1980.171mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2593.362mil|Location2.X=2930.102mil|Location1.Y=1865.449mil|Location2.Y=1980.171mil|Absolute=True">Un-Routed Net Constraint: Net ProbeGND Between Pad KDGen_GND-3(1009.842mil,362.825mil) on Top Layer [Unplated] And Pad JProbe-2(1254.921mil,314.37mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3079.583mil|Location2.X=3176.165mil|Location1.Y=1865.449mil|Location2.Y=2208.095mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3079.583mil|Location2.X=3176.165mil|Location1.Y=1865.449mil|Location2.Y=2208.095mil|Absolute=True">Un-Routed Net Constraint: Net ProbeGND Between Pad JProbe-3(1500.984mil,314.37mil) on Multi-Layer And Pad JProbe-4(1500.984mil,560.433mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3079.583mil|Location2.X=3416.323mil|Location1.Y=1865.449mil|Location2.Y=1980.171mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3079.583mil|Location2.X=3416.323mil|Location1.Y=1865.449mil|Location2.Y=1980.171mil|Absolute=True">Un-Routed Net Constraint: Net ProbeGND Between Pad JProbe-3(1500.984mil,314.37mil) on Multi-Layer And Pad KLNA_GND-4(1746.063mil,362.825mil) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2833.52mil|Location2.X=2980.417mil|Location1.Y=2111.512mil|Location2.Y=2402.898mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2833.52mil|Location2.X=2980.417mil|Location1.Y=2111.512mil|Location2.Y=2402.898mil|Absolute=True">Un-Routed Net Constraint: Net ProbeGND Between Pad JProbe-5(1254.921mil,560.433mil) on Multi-Layer And Pad PMCU-3(1320mil,770mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2593.362mil|Location2.X=2680.102mil|Location1.Y=1844.218mil|Location2.Y=2222.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2593.362mil|Location2.X=2680.102mil|Location1.Y=1844.218mil|Location2.Y=2222.858mil|Absolute=True">Un-Routed Net Constraint: Net NetMCU_GND Between Pad KDGen_GND-1(1009.842mil,262.825mil) on Top Layer [Unplated] And Pad KDGen-2(1009.842mil,605.512mil) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2266.591mil|Location2.X=2353.331mil|Location1.Y=1844.218mil|Location2.Y=2222.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2266.591mil|Location2.X=2353.331mil|Location1.Y=1844.218mil|Location2.Y=2222.858mil|Absolute=True">Un-Routed Net Constraint: Net NetMCU2 Between Pad KDGen_GND-2(683.071mil,262.825mil) on Top Layer [Unplated] And Pad KDGen-1(683.071mil,605.512mil) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2266.591mil|Location2.X=2880.417mil|Location1.Y=2186.905mil|Location2.Y=2402.898mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2266.591mil|Location2.X=2880.417mil|Location1.Y=2186.905mil|Location2.Y=2402.898mil|Absolute=True">Un-Routed Net Constraint: Net NetMCU2 Between Pad KDGen-1(683.071mil,605.512mil) on Top Layer [Unplated] And Pad PMCU-4(1220mil,770mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2593.362mil|Location2.X=3080.417mil|Location1.Y=2186.905mil|Location2.Y=2402.898mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2593.362mil|Location2.X=3080.417mil|Location1.Y=2186.905mil|Location2.Y=2402.898mil|Absolute=True">Un-Routed Net Constraint: Net NetMCU_GND Between Pad KDGen-2(1009.842mil,605.512mil) on Top Layer [Unplated] And Pad PMCU-2(1420mil,770mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3656.354mil|Location2.X=3743.095mil|Location1.Y=1844.218mil|Location2.Y=2222.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3656.354mil|Location2.X=3743.095mil|Location1.Y=1844.218mil|Location2.Y=2222.858mil|Absolute=True">Un-Routed Net Constraint: Net NetMCU1 Between Pad KLNA_GND-1(2072.835mil,262.825mil) on Top Layer [Unplated] And Pad KLNA-2(2072.835mil,605.512mil) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3329.583mil|Location2.X=3416.323mil|Location1.Y=1844.218mil|Location2.Y=2222.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3329.583mil|Location2.X=3416.323mil|Location1.Y=1844.218mil|Location2.Y=2222.858mil|Absolute=True">Un-Routed Net Constraint: Net NetMCU_GND Between Pad KLNA_GND-2(1746.063mil,262.825mil) on Top Layer [Unplated] And Pad KLNA-1(1746.063mil,605.512mil) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3013.362mil|Location2.X=3416.323mil|Location1.Y=2186.905mil|Location2.Y=2402.898mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3013.362mil|Location2.X=3416.323mil|Location1.Y=2186.905mil|Location2.Y=2402.898mil|Absolute=True">Un-Routed Net Constraint: Net NetMCU_GND Between Pad PMCU-2(1420mil,770mil) on Multi-Layer And Pad KLNA-1(1746.063mil,605.512mil) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3113.362mil|Location2.X=3743.095mil|Location1.Y=2186.905mil|Location2.Y=2402.898mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3113.362mil|Location2.X=3743.095mil|Location1.Y=2186.905mil|Location2.Y=2402.898mil|Absolute=True">Un-Routed Net Constraint: Net NetMCU1 Between Pad PMCU-1(1520mil,770mil) on Multi-Layer And Pad KLNA-2(2072.835mil,605.512mil) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID0UKZ1GLSA102JOIHB2PQW5OL3L3HX51JHUSH12BFWEG4ZLMM4YIL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2591.737mil|Location2.X=2602.987mil|Location1.Y=1838.066mil|Location2.Y=1849.316mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2591.737mil|Location2.X=2602.987mil|Location1.Y=1838.066mil|Location2.Y=1849.316mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.055mil &lt; 10mil) Between Pad KDGen_GND-1(1009.842mil,262.825mil) on Top Layer And Track (688.976mil,237.825mil)(1003.937mil,237.825mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2343.706mil|Location2.X=2354.956mil|Location1.Y=1838.066mil|Location2.Y=1849.316mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2343.706mil|Location2.X=2354.956mil|Location1.Y=1838.066mil|Location2.Y=1849.316mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.055mil &lt; 10mil) Between Pad KDGen_GND-2(683.071mil,262.825mil) on Top Layer And Track (688.976mil,237.825mil)(1003.937mil,237.825mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2591.737mil|Location2.X=2602.987mil|Location1.Y=1975.074mil|Location2.Y=1986.324mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2591.737mil|Location2.X=2602.987mil|Location1.Y=1975.074mil|Location2.Y=1986.324mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.055mil &lt; 10mil) Between Pad KDGen_GND-3(1009.842mil,362.825mil) on Top Layer And Track (728.346mil,387.825mil)(984.252mil,387.825mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2343.706mil|Location2.X=2354.956mil|Location1.Y=2217.761mil|Location2.Y=2229.011mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2343.706mil|Location2.X=2354.956mil|Location1.Y=2217.761mil|Location2.Y=2229.011mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.055mil &lt; 10mil) Between Pad KDGen-1(683.071mil,605.512mil) on Top Layer And Track (688.976mil,630.512mil)(1003.937mil,630.512mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2591.737mil|Location2.X=2602.987mil|Location1.Y=2217.761mil|Location2.Y=2229.011mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2591.737mil|Location2.X=2602.987mil|Location1.Y=2217.761mil|Location2.Y=2229.011mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.055mil &lt; 10mil) Between Pad KDGen-2(1009.842mil,605.512mil) on Top Layer And Track (688.976mil,630.512mil)(1003.937mil,630.512mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2343.706mil|Location2.X=2354.956mil|Location1.Y=2080.753mil|Location2.Y=2092.003mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2343.706mil|Location2.X=2354.956mil|Location1.Y=2080.753mil|Location2.Y=2092.003mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.055mil &lt; 10mil) Between Pad KDGen-3(683.071mil,505.512mil) on Top Layer And Track (708.661mil,480.512mil)(964.567mil,480.512mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3654.729mil|Location2.X=3665.979mil|Location1.Y=1838.066mil|Location2.Y=1849.316mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3654.729mil|Location2.X=3665.979mil|Location1.Y=1838.066mil|Location2.Y=1849.316mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.055mil &lt; 10mil) Between Pad KLNA_GND-1(2072.835mil,262.825mil) on Top Layer And Track (1751.968mil,237.825mil)(2066.929mil,237.825mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3406.698mil|Location2.X=3417.948mil|Location1.Y=1838.066mil|Location2.Y=1849.316mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3406.698mil|Location2.X=3417.948mil|Location1.Y=1838.066mil|Location2.Y=1849.316mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.055mil &lt; 10mil) Between Pad KLNA_GND-2(1746.063mil,262.825mil) on Top Layer And Track (1751.968mil,237.825mil)(2066.929mil,237.825mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3654.729mil|Location2.X=3665.979mil|Location1.Y=1975.074mil|Location2.Y=1986.324mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3654.729mil|Location2.X=3665.979mil|Location1.Y=1975.074mil|Location2.Y=1986.324mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.055mil &lt; 10mil) Between Pad KLNA_GND-3(2072.835mil,362.825mil) on Top Layer And Track (1791.339mil,387.825mil)(2047.244mil,387.825mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3406.698mil|Location2.X=3417.948mil|Location1.Y=2217.761mil|Location2.Y=2229.011mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3406.698mil|Location2.X=3417.948mil|Location1.Y=2217.761mil|Location2.Y=2229.011mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.055mil &lt; 10mil) Between Pad KLNA-1(1746.063mil,605.512mil) on Top Layer And Track (1751.968mil,630.512mil)(2066.929mil,630.512mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3654.729mil|Location2.X=3665.979mil|Location1.Y=2217.761mil|Location2.Y=2229.011mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3654.729mil|Location2.X=3665.979mil|Location1.Y=2217.761mil|Location2.Y=2229.011mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.055mil &lt; 10mil) Between Pad KLNA-2(2072.835mil,605.512mil) on Top Layer And Track (1751.968mil,630.512mil)(2066.929mil,630.512mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3406.698mil|Location2.X=3417.948mil|Location1.Y=2080.753mil|Location2.Y=2092.003mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3406.698mil|Location2.X=3417.948mil|Location1.Y=2080.753mil|Location2.Y=2092.003mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.055mil &lt; 10mil) Between Pad KLNA-3(1746.063mil,505.512mil) on Top Layer And Track (1771.653mil,480.512mil)(2027.559mil,480.512mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.055mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDHQ0NRGSDEJJGL40IVQHYZEFMAPYITONU52WLKZO52IYWYHIWFWFN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2891.93mil|Location2.X=2903.18mil|Location1.Y=2422.431mil|Location2.Y=2433.681mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2891.93mil|Location2.X=2903.18mil|Location1.Y=2422.431mil|Location2.Y=2433.681mil|Absolute=True">Silk To Silk Clearance Constraint: (9.498mil &lt; 10mil) Between Text "PMCU" (1270.666mil,838.435mil) on Top Overlay And Track (1170mil,820mil)(1570mil,820mil) on Top Overlay Silk Text to Silk Clearance [9.498mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
