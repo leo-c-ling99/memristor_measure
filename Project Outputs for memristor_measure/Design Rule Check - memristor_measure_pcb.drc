@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\Public\Documents\Altium\Projects\memristor_measure\memristor_measure_pcb.PcbDoc
-Date     : 2021-12-13
-Time     : 22:59:29
+Date     : 2021-12-15
+Time     : 12:04:34
 
 Processing Rule : Clearance Constraint (Gap=10mil) (All),(All)
    Violation between Clearance Constraint: (Collision < 10mil) Pad KDGen_GND-1(1009.842mil,262.825mil) on Top Layer 
@@ -20,41 +20,67 @@ Processing Rule : Clearance Constraint (Gap=10mil) (All),(All)
    Violation between Clearance Constraint: (Collision < 10mil) Pad KLNA-2(2072.835mil,605.512mil) on Top Layer 
    Violation between Clearance Constraint: (Collision < 10mil) Pad KLNA-3(1746.063mil,505.512mil) on Top Layer 
    Violation between Clearance Constraint: (Collision < 10mil) Pad KLNA-4(2072.835mil,505.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Polygon Region (112 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Polygon Region (169 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Polygon Region (179 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Polygon Region (206 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Polygon Region (209 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Polygon Region (255 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Polygon Region (4 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Polygon Region (98 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1007.018mil,260mil)(1009.842mil,262.825mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1009.842mil,505.512mil)(1094.488mil,505.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1094.488mil,505.512mil)(1160mil,440mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1160mil,440mil)(1375.354mil,440mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1375.354mil,440mil)(1377.953mil,437.402mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1377.953mil,437.402mil)(1380.551mil,440mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1380.551mil,440mil)(1600mil,440mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1420mil,760mil)(1420mil,840mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1420mil,760mil)(1800mil,760mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1520mil,840mil)(1830mil,840mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1600mil,440mil)(1665.512mil,505.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1665.512mil,505.512mil)(1746.063mil,505.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1746.063mil,262.825mil)(1822.825mil,262.825mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1746.063mil,605.512mil)(1825.512mil,605.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1800mil,760mil)(1840mil,720mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1822.825mil,262.825mil)(1840mil,280mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1825.512mil,605.512mil)(1840mil,620mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1830mil,840mil)(1980mil,690mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1840mil,280mil)(1840mil,620mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1840mil,620mil)(1840mil,720mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1980mil,280mil)(1980mil,690mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1980mil,280mil)(1997.175mil,262.825mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1994.488mil,605.512mil)(2072.835mil,605.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (1997.175mil,262.825mil)(2072.835mil,262.825mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (2072.835mil,505.512mil)(2154.488mil,505.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (2154.488mil,505.512mil)(2220mil,440mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (2220mil,440mil)(2438.347mil,440mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (2438.347mil,440mil)(2440.945mil,437.402mil) on Top Layer 
    Violation between Clearance Constraint: (Collision < 10mil) Track (314.961mil,437.402mil)(557.402mil,437.402mil) on Top Layer 
    Violation between Clearance Constraint: (Collision < 10mil) Track (557.402mil,437.402mil)(625.512mil,505.512mil) on Top Layer 
    Violation between Clearance Constraint: (Collision < 10mil) Track (625.512mil,505.512mil)(683.071mil,505.512mil) on Top Layer 
-Rule Violations :19
+   Violation between Clearance Constraint: (Collision < 10mil) Track (683.071mil,262.825mil)(762.825mil,262.825mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (683.071mil,605.512mil)(785.512mil,605.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (762.825mil,262.825mil)(785.512mil,285.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (785.512mil,285.512mil)(785.512mil,605.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (785.512mil,605.512mil)(785.512mil,685.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (785.512mil,685.512mil)(940mil,840mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (920mil,280mil)(920mil,620mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (920mil,280mil)(940mil,260mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (920mil,620mil)(920mil,730mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (920mil,620mil)(934.488mil,605.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (920mil,730mil)(950mil,760mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (934.488mil,605.512mil)(1009.842mil,605.512mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (940mil,260mil)(1007.018mil,260mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (940mil,840mil)(1220mil,840mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 10mil) Track (950mil,760mil)(1420mil,760mil) on Top Layer 
+Rule Violations :70
 
 Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
 Rule Violations :0
 
 Processing Rule : Un-Routed Net Constraint ( (All) )
-   Violation between Un-Routed Net Constraint: Net DGenGND Between Pad JDGen-2(191.929mil,314.37mil) on Multi-Layer And Pad JDGen-3(437.992mil,314.37mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net DGenGND Between Pad JDGen-2(191.929mil,314.37mil) on Multi-Layer And Pad JDGen-5(191.929mil,560.433mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net DGenGND Between Pad JDGen-3(437.992mil,314.37mil) on Multi-Layer And Pad KDGen_GND-4(683.071mil,362.825mil) on Top Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net DGenGND Between Pad JDGen-5(191.929mil,560.433mil) on Multi-Layer And Pad JDGen-4(437.992mil,560.433mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net NetLNA Between Pad KLNA-4(2072.835mil,505.512mil) on Top Layer [Unplated] And Pad JLNA-1(2440.945mil,437.402mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net LNAGND Between Pad JLNA-2(2317.913mil,314.37mil) on Multi-Layer And Pad JLNA-3(2563.976mil,314.37mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net LNAGND Between Pad KLNA_GND-3(2072.835mil,362.825mil) on Top Layer [Unplated] And Pad JLNA-2(2317.913mil,314.37mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net LNAGND Between Pad JLNA-3(2563.976mil,314.37mil) on Multi-Layer And Pad JLNA-4(2563.976mil,560.433mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net LNAGND Between Pad JLNA-5(2317.913mil,560.433mil) on Multi-Layer And Pad JLNA-4(2563.976mil,560.433mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net NetProbe Between Pad KDGen-4(1009.842mil,505.512mil) on Top Layer [Unplated] And Pad JProbe-1(1377.953mil,437.402mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net NetProbe Between Pad JProbe-1(1377.953mil,437.402mil) on Multi-Layer And Pad KLNA-3(1746.063mil,505.512mil) on Top Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net ProbeGND Between Pad JProbe-2(1254.921mil,314.37mil) on Multi-Layer And Pad JProbe-3(1500.984mil,314.37mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net ProbeGND Between Pad JProbe-2(1254.921mil,314.37mil) on Multi-Layer And Pad JProbe-5(1254.921mil,560.433mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net ProbeGND Between Pad KDGen_GND-3(1009.842mil,362.825mil) on Top Layer [Unplated] And Pad JProbe-2(1254.921mil,314.37mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net ProbeGND Between Pad JProbe-3(1500.984mil,314.37mil) on Multi-Layer And Pad JProbe-4(1500.984mil,560.433mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net ProbeGND Between Pad JProbe-3(1500.984mil,314.37mil) on Multi-Layer And Pad KLNA_GND-4(1746.063mil,362.825mil) on Top Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net ProbeGND Between Pad JProbe-5(1254.921mil,560.433mil) on Multi-Layer And Pad PMCU-3(1320mil,770mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net NetMCU_GND Between Pad KDGen_GND-1(1009.842mil,262.825mil) on Top Layer [Unplated] And Pad KDGen-2(1009.842mil,605.512mil) on Top Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net NetMCU2 Between Pad KDGen_GND-2(683.071mil,262.825mil) on Top Layer [Unplated] And Pad KDGen-1(683.071mil,605.512mil) on Top Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net NetMCU2 Between Pad KDGen-1(683.071mil,605.512mil) on Top Layer [Unplated] And Pad PMCU-4(1220mil,770mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net NetMCU_GND Between Pad KDGen-2(1009.842mil,605.512mil) on Top Layer [Unplated] And Pad PMCU-2(1420mil,770mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net NetMCU1 Between Pad KLNA_GND-1(2072.835mil,262.825mil) on Top Layer [Unplated] And Pad KLNA-2(2072.835mil,605.512mil) on Top Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net NetMCU_GND Between Pad KLNA_GND-2(1746.063mil,262.825mil) on Top Layer [Unplated] And Pad KLNA-1(1746.063mil,605.512mil) on Top Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net NetMCU_GND Between Pad PMCU-2(1420mil,770mil) on Multi-Layer And Pad KLNA-1(1746.063mil,605.512mil) on Top Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net NetMCU1 Between Pad PMCU-1(1520mil,770mil) on Multi-Layer And Pad KLNA-2(2072.835mil,605.512mil) on Top Layer [Unplated] 
-Rule Violations :25
+Rule Violations :0
 
 Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
 Rule Violations :0
@@ -93,8 +119,7 @@ Processing Rule : Silk To Solder Mask (Clearance=10mil) (IsPad),(All)
 Rule Violations :12
 
 Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
-   Violation between Silk To Silk Clearance Constraint: (9.498mil < 10mil) Between Text "PMCU" (1270.666mil,838.435mil) on Top Overlay And Track (1170mil,820mil)(1570mil,820mil) on Top Overlay Silk Text to Silk Clearance [9.498mil]
-Rule Violations :1
+Rule Violations :0
 
 Processing Rule : Net Antennae (Tolerance=0mil) (All)
 Rule Violations :0
@@ -112,6 +137,6 @@ Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (
 Rule Violations :0
 
 
-Violations Detected : 57
+Violations Detected : 82
 Waived Violations : 0
-Time Elapsed        : 00:00:08
+Time Elapsed        : 00:00:01

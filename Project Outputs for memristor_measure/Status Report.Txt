@@ -1,0 +1,28 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [memristor_measure.PrjPcb]
+   Generated File[memristor_measure_pcb.GTO]
+   Generated File[memristor_measure_pcb.GTP]
+   Generated File[memristor_measure_pcb.GTS]
+   Generated File[memristor_measure_pcb.GTL]
+   Generated File[memristor_measure_pcb.GBL]
+   Generated File[memristor_measure_pcb.GBS]
+   Generated File[memristor_measure_pcb.GBP]
+   Generated File[memristor_measure_pcb.GBO]
+   Generated File[memristor_measure_pcb.GM1]
+   Generated File[memristor_measure_pcb.GM13]
+   Generated File[memristor_measure_pcb.GM15]
+   Generated File[memristor_measure_pcb.GKO]
+   Generated File[memristor_measure_pcb.GPT]
+   Generated File[memristor_measure_pcb.GPB]
+   Generated File[memristor_measure_pcb.GD1]
+   Generated File[memristor_measure_pcb.GG1]
+   Generated File[memristor_measure_pcb.RUL]
+   Generated File[memristor_measure_pcb.EXTREP]
+   Generated File[memristor_measure_pcb.REP]
+
+
+Files Generated   : 19
+Documents Printed : 0
+
+Finished Output Generation At 12:19:14 On 2021-12-15
