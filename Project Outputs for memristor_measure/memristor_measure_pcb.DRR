@@ -1,0 +1,18 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: memristor_measure_pcb.PcbDoc   2021-12-15  13:27:59
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : memristor_measure_pcb.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      15mil (0.381mm)                                           Round             151       PTH        14.88inch (377.99mm)
+T2      35mil (0.9mm)                                             Round             4         PTH        0.30inch (7.62mm)
+T3      51mil (1.3mm)                                             Round             3         PTH        2.13inch (54.00mm)
+T4      59mil (1.5mm)                                             Round             12        PTH        4.91inch (124.75mm)
+T5      94mil (2.4mm)                                             Round             4         PTH        4.14inch (105.16mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              174
+
+Total Processing Time (hh:mm:ss) : 00:00:00

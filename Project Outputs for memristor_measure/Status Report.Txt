@@ -15,14 +15,12 @@ From  : Variant [[No Variations]] of Project [memristor_measure.PrjPcb]
    Generated File[memristor_measure_pcb.GKO]
    Generated File[memristor_measure_pcb.GPT]
    Generated File[memristor_measure_pcb.GPB]
-   Generated File[memristor_measure_pcb.GD1]
-   Generated File[memristor_measure_pcb.GG1]
    Generated File[memristor_measure_pcb.RUL]
    Generated File[memristor_measure_pcb.EXTREP]
    Generated File[memristor_measure_pcb.REP]
 
 
-Files Generated   : 19
+Files Generated   : 17
 Documents Printed : 0
 
-Finished Output Generation At 12:19:14 On 2021-12-15
+Finished Output Generation At 13:33:37 On 2021-12-15
